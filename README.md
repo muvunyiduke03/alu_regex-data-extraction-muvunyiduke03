@@ -31,6 +31,34 @@ Use any string of text that contains data you want to extract. This include a te
 
 ### 3. Instantiate the class and call the methods
 
+```python
+from extract_data import extract_data
+
+text = """
+Email: support@MNHD.com
+Phone US: (123) 456-7890
+Phone Rwanda: +250 788 123 456
+Opening hour: 09:00
+Website: https://www.MNHD.com
+Credit Card: 1234-5678-9101-1121.
+"""
+
+extractor = extract_data(text)
+results = extractor.extract_all()
+
+for key, value in results.items():
+    print(f"{key}: {value}")
+```
+## Output
+```
+Extracted Data:
+emails: ['support@MNHD.com']
+Phone Numbers: ['(123) 456-7890', '+250 788 123 456']
+Hours: ['09:00']
+URLs: ['https://www.MNHD.com']
+Credit Cards: ['1234-5678-9101-1121']
+```
+
 ## Contributions
 
 Pull requests and any improvements on the code are welcome. Feel free to fork the repository and submit a PR. 
