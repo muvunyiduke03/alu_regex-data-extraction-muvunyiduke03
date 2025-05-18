@@ -38,7 +38,7 @@ if __name__ == "__main__":
     text = """
     Email: support@MNHD.com
     Phone: +250 788-0000
-    Opening hours: 09:00-17:00
+    Opening hour: 09:00 
     Website: https://www.MNHD.com
     Credit Card: 1234-5678-9101-1121.
     """
